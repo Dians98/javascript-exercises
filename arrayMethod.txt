@@ -1,0 +1,51 @@
+->MAP()
+map est utilisé pour effectuer des manipulations sur la valeur direct du tableau
+EX : on veut avoir la somme au carré de chaque element
+let tab = [1,2,3]                                                                ;
+
+tab.map(item => Math.sqrt(num))
+
+->REDUCE()
+
+Il est utilisé pour ne retourner qu'une seule valeure cumulée (l'accumulator qui est donné par le return de la fonction)
+
+EX 1: On veut avoir la personne la plus agée d'un tableau
+REMARQUE : A la premiere iteration, oldest aura la valeur de l'element[0] et current [1]
+people.reduce(oldestValue, currentValue => {
+let oldestAge = getAge(oldest.yearOfBirth, oldest.yearOfDeath)                           ;
+let currentAge = getAge(currentAge.yearOfBirth, currentAge.yearOfDeath)
+
+return oldestAge < currentAge ? currentValue : oldestValue ;               ;
+
+return
+})
+
+EX2: On veut calculer la somme des nombres dans un tableau
+
+let tab = [1,2,3] ;
+
+function add(old, current)
+return old + current       ;
+
+//Ici on va utiliser du callback
+tab.reduce(add)                                                               ;//Imaginons que c'est un peu comme tab.reduce(old, current) donc à la premiere iteration old =1, et current=2
+et qui va retourner dans l'accumulator la valeur de 1 + 2 i-e accumulator = 3
+//A la deuxieme itération (accumulator = 3, current = 3 (la valeur tab[2]))
+
+->filter()
+elle est utilisé comme son nom l'indique pour filtrer les éléments d'un tableau, elle fait passer un test (condition),
+et les elements qui ne passent pas la condition seront enlevé du tableau
+
+EX : On veut pouvoir filtrer l'age qui peut voter
+let tab = [20, 22, 5, 10, 40]
+
+function canVote(age)
+{
+    return age > 18;
+}
+
+tab.filter(canVote);// ça enlevera tous les ages inférieur à 18 de l'array
+
+ALTERNATIVE(sans utilisation de callback)
+
+tab.filter(age => age > 18);

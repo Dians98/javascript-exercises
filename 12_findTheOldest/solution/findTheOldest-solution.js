@@ -7,6 +7,10 @@ const getAge = function (birth, death) {
 
 const findTheOldest = function (people) {
   return people.reduce((oldest, currentPerson) => {
+    /**
+     * A LA PREMIERE ITERATION OLDEST est l'element[0] et current l'element[1] 
+     * le 1er parametre c'est l'accumulator et le deuxième currentValue
+     */
     const oldestAge = getAge(oldest.yearOfBirth, oldest.yearOfDeath);
     const currentAge = getAge(
       currentPerson.yearOfBirth,
