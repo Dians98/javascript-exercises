@@ -1,0 +1,34 @@
+const data = [5, 1, 3, 2, 3, 4, 1, 5, 2, 4];
+const uniqueData = data.filter((value, index) => data.indexOf(value) === index);
+console.log(uniqueData); // [5, 1, 3, 2, 4]
+Explication étape par étape pour cet exemple :
+Premier élément (5, index 0) :
+
+data.indexOf(5) renvoie 0, qui est égal à index (0). Donc, 5 est gardé.
+Deuxième élément (1, index 1) :
+
+data.indexOf(1) renvoie 1, qui est égal à index (1). Donc, 1 est gardé.
+Troisième élément (3, index 2) :
+
+data.indexOf(3) renvoie 2, qui est égal à index (2). Donc, 3 est gardé.
+Quatrième élément (2, index 3) :
+
+data.indexOf(2) renvoie 3, qui est égal à index (3). Donc, 2 est gardé.
+Cinquième élément (3, index 4) :
+
+data.indexOf(3) renvoie 2, qui n'est pas égal à index (4). Donc, 3 est un doublon et est filtré.
+Sixième élément (4, index 5) :
+
+data.indexOf(4) renvoie 5, qui est égal à index (5). Donc, 4 est gardé.
+Septième élément (1, index 6) :
+
+data.indexOf(1) renvoie 1, qui n'est pas égal à index (6). Donc, 1 est un doublon et est filtré.
+Huitième élément (5, index 7) :
+
+data.indexOf(5) renvoie 0, qui n'est pas égal à index (7). Donc, 5 est un doublon et est filtré.
+Neuvième élément (2, index 8) :
+
+data.indexOf(2) renvoie 3, qui n'est pas égal à index (8). Donc, 2 est un doublon et est filtré.
+Dixième élément (4, index 9) :
+
+data.indexOf(4) renvoie 5, qui n'est pas égal à index (9). Donc, 4 est un doublon et est filtré.
